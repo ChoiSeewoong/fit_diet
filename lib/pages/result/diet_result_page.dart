@@ -82,8 +82,6 @@ class _DietResultPageState extends State<DietResultPage> {
 
   Future<void> _generateAndSharePDF() async {
     final pdf = pw.Document();
-
-    // ✅ 한글 폰트 로드
     final font = await rootBundle.load('assets/fonts/NotoSansKR-Regular.ttf');
     final ttf = pw.Font.ttf(font);
 
@@ -139,7 +137,7 @@ class _DietResultPageState extends State<DietResultPage> {
                           border: Border.all(color: Colors.grey.shade300),
                         ),
                         child: SingleChildScrollView(
-                          child: Text(
+                          child: SelectableText(
                             result,
                             style: const TextStyle(
                               fontSize: 16,
