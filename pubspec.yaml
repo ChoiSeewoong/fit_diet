@@ -1,0 +1,38 @@
+name: fit_diet
+description: "A new Flutter project."
+publish_to: 'none' # This is so that the package won’t be published to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^0.13.6
+  shared_preferences: ^2.2.0
+  flutter_dotenv: ^5.1.0
+  timezone: ^0.9.1
+  flutter_local_notifications: ^16.1.0
+  pdf: ^3.10.4
+  printing: ^5.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+    - assets/logo_pink.png
+    - assets/fonts/NotoSansKR-Regular.ttf  # ✅ 폰트 파일도 에셋에 포함
+
+  fonts:
+    - family: NotoSansKR
+      fonts:
+        - asset: assets/fonts/NotoSansKR-Regular.ttf
